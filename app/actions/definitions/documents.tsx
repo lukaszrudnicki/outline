@@ -536,7 +536,7 @@ export const printDocument = createAction({
   analyticsName: "Print document",
   section: DocumentSection,
   icon: <PrintIcon />,
-  visible: ({ activeDocumentId }) => !!(activeDocumentId && window.print),
+  visible: ({ activeDocumentId }) => false,
   perform: async () => {
     queueMicrotask(window.print);
   },
